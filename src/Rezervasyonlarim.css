@@ -1,0 +1,373 @@
+/* Rezervasyonlarım Sayfası Modern Responsive Tablo */
+.rezervasyonlarim-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0 2px 16px #0001;
+    padding: 0 32px 0 32px;
+    min-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.rezervasyonlarim-title {
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+    padding-top: 32px;
+    padding-left: 32px;
+}
+
+.rezervasyonlarim-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    table-layout: auto;
+    margin-top: 16px;
+    margin-bottom: -4px;
+}
+
+.rezervasyonlarim-table th {
+    font-family: 'Poppins', 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    background: #F8F9FB;
+    text-align: left;
+    padding: 16px 16px 16px 16px;
+    letter-spacing: -0.01em;
+    border-bottom: 1.5px solid #E5E7EB;
+    text-transform: none;
+}
+
+.rezervasyonlarim-table td {
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #222;
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px 10px 14px 10px;
+    vertical-align: middle;
+    overflow: hidden;
+    border-bottom: 1px solid #F0F1F3;
+    transition: background 0.15s;
+}
+
+.rezervasyonlarim-table tr {
+    transition: background 0.15s;
+}
+
+.rezervasyonlarim-table tbody tr:nth-child(even) td {
+    background: #F6F7F9;
+}
+
+.rezervasyonlarim-table tbody tr:hover td {
+    background: #F1F3F6;
+    color: #222;
+}
+
+.rezervasyonlarim-table .action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.rezervasyonlarim-table .action-btn {
+    background: #fff;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s, border 0.15s;
+    padding: 0;
+    overflow: hidden;
+}
+
+.action-btn svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.action-btn:hover {
+    background: #F3F4F6;
+    border-color: #B5B7C0;
+}
+
+.rezervasyonlarim-count {
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #B5B7C0;
+    margin-top: 0;
+    text-align: left;
+    padding-left: 32px;
+    padding-bottom: -4px;
+}
+
+.rezervasyonlarim-pagination {
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.rezervasyonlarim-page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 32px;
+    background: #F5F5F5;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    font-family: 'Poppins', 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #404B52;
+    cursor: pointer;
+    transition: background 0.15s, border 0.15s, color 0.15s;
+    user-select: none;
+    padding: 0 10px;
+}
+
+.rezervasyonlarim-page-btn.active {
+    background: #5932EA;
+    border: 1px solid #5932EA;
+    color: #fff;
+}
+
+.rezervasyonlarim-page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.rezervasyonlarim-page-ellipsis {
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #000;
+    padding: 0 8px;
+    user-select: none;
+}
+
+.rezervasyonlarim-search-box {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    width: 260px;
+    height: 48px;
+    background: #F9FBFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px #0001;
+    border: none;
+    padding: 0 16px;
+    z-index: 10;
+}
+
+.rezervasyonlarim-search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #292D32;
+    outline: none;
+    padding: 0 8px;
+}
+
+.rezervasyonlarim-search-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B5B7C0;
+}
+
+.rezervasyonlarim-action-bar {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.rezervasyonlarim-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rezervasyonlarim-modal {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px #0002;
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rezervasyonlarim-modal-title {
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.rezervasyonlarim-modal-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.rezervasyonlarim-modal-btn {
+    padding: 8px 24px;
+    border-radius: 6px;
+    border: none;
+    background: #F3F4F6;
+    color: #222;
+    font-size: 1rem;
+    font-family: 'Space Grotesk', 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.rezervasyonlarim-modal-btn.sil {
+    background: #D32F2F;
+    color: #fff;
+}
+
+.rezervasyonlarim-modal-btn:hover {
+    background: #E0E1E6;
+}
+
+.rezervasyonlarim-modal-btn.sil:hover {
+    background: #B71C1C;
+}
+
+@media (max-width: 900px) {
+    .rezervasyonlarim-container {
+        padding: 0 8px 0 8px;
+        min-width: 0;
+        max-width: 100vw;
+        min-height: 100vh;
+        height: 100vh;
+    }
+
+    .rezervasyonlarim-title {
+        font-size: 2rem;
+        padding-top: 16px;
+        padding-left: 8px;
+    }
+
+    .rezervasyonlarim-table th,
+    .rezervasyonlarim-table td {
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+
+    .rezervasyonlarim-table {
+        min-width: 700px;
+    }
+
+    .rezervasyonlarim-count {
+        padding-left: 8px;
+        padding-bottom: 12px;
+    }
+
+    .rezervasyonlarim-pagination {
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .rezervasyonlarim-search-box {
+        right: 8px;
+        top: 12px;
+        width: 180px;
+        height: 40px;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rezervasyonlarim-title {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+        padding-top: 8px;
+        padding-left: 4px;
+    }
+
+    .rezervasyonlarim-table th,
+    .rezervasyonlarim-table td {
+        font-size: 11px;
+        padding: 6px 2px;
+    }
+
+    .rezervasyonlarim-count {
+        font-size: 12px;
+        padding-left: 4px;
+        padding-bottom: 8px;
+    }
+
+    .rezervasyonlarim-container {
+        padding: 0 2px 0 2px;
+        min-height: 100vh;
+        height: 100vh;
+    }
+
+    .rezervasyonlarim-table {
+        min-width: 500px;
+    }
+
+    .rezervasyonlarim-pagination {
+        right: 2px;
+        bottom: 2px;
+    }
+
+    .rezervasyonlarim-search-box {
+        right: 2px;
+        top: 4px;
+        width: 120px;
+        height: 32px;
+        padding: 0 4px;
+    }
+
+    .rezervasyonlarim-action-bar {
+        justify-content: center;
+    }
+}
