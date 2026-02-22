@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+.main-layout {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8fafc;
+    overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+/* Scrollbar styling for a cleaner look */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

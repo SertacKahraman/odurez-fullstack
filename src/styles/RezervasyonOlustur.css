@@ -1,0 +1,178 @@
+.rezervasyon-olustur-container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rezervasyon-form-wrapper {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.rezervasyon-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 32px;
+}
+
+.rezervasyon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.rezervasyon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rezervasyon-section label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: -8px;
+}
+
+.rezervasyon-section select,
+.rezervasyon-section input,
+.rezervasyon-section textarea {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  transition: all 0.2s;
+}
+
+.rezervasyon-section select:focus,
+.rezervasyon-section input:focus,
+.rezervasyon-section textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Calendar styling within the form */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.calendar-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.calendar-nav button {
+  padding: 4px 12px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+}
+
+.mini-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  background: #f1f5f9;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  padding-bottom: 4px;
+}
+
+.day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 6px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.day:hover {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.day.selected {
+  background: #4f46e5;
+  color: white;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 32px;
+  padding: 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.rezervasyon-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.rezervasyon-toast.success {
+  background: #10b981;
+}
+
+.rezervasyon-toast.error {
+  background: #ef4444;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .rezervasyon-grid {
+    grid-template-columns: 1fr;
+  }
+}
