@@ -2,7 +2,7 @@
 
 Ordu Üniversitesi için geliştirilmiş, modern ve ölçeklenebilir bir salon rezervasyon yönetim sistemidir. Proje, yüksek performanslı bir Go backend ve etkileşimli bir React frontend'den oluşmaktadır.
 
-## 🚀 Proje Genel Yapısı
+##  Proje Genel Yapısı
 
 Sistem iki ana parçaya bölünmüştür:
 
@@ -25,7 +25,7 @@ odurez-main/
 └── README.md            # Genel proje dökümanı
 ```
 
-## 🛠 Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 ### Backend
 - **Dil:** Go (Golang)
@@ -41,7 +41,7 @@ odurez-main/
 - **Stil:** Vanilla CSS (Özel tasarım sistemi)
 - **Veri Paylaşımı:** Hooks ve Storage tabanlı Auth yönetimi
 
-## 📦 Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 ### 1. Ön Hazırlık
 - Go (1.20+) ve Node.js (18+) yüklü olmalıdır.
@@ -62,7 +62,7 @@ npm run dev
 ```
 *Frontend varsayılan olarak `http://localhost:5173` adresinde çalışacaktır.*
 
-## 📋 Mevcut API Uç Noktaları
+##  Mevcut API Uç Noktaları
 
 | Yöntem | Endpoint | Açıklama |
 | :--- | :--- | :--- |
@@ -72,7 +72,7 @@ npm run dev
 | `GET` | `/rezervasyonlar` | Mevcut rezervasyonları listeleme |
 | `POST` | `/rezervasyonlar` | Yeni rezervasyon oluşturma |
 
-## 📐 Yapısal Analiz
+##  Yapısal Analiz
 Proje, **Seperation of Concerns** (İlgi Alanlarının Ayrılması) prensibine uygun olarak geliştirilmiştir:
 - **Backend**, tamamen veriden sorumlu bir API katmanı olarak çalışır.
 - **Frontend**, sadece veriyi görselleştiren ve kullanıcıyla etkileşime giren bağımsız bir uygulamadır.
